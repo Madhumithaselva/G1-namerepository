@@ -12,9 +12,10 @@ public class NameRepository {
 
         add("Anna Panna");
 
-        String[] findLastNameArray = findByLastName("Panna");
+//        String[] findLastNameArray = findByLastName("Panna");
 
-        boolean updateCheck = update("Anna Panna", "Gerd Abc" );
+        boolean updateCheck = update("Anna Pana", "Gerd Abc" );
+        System.out.println(Arrays.toString(names));
     }
 
     public static int getSize(String[] names) {
@@ -123,10 +124,13 @@ public class NameRepository {
 
     public static boolean update(final String original, final String updatedName) {
         for (int i = 0; i < names.length; i++) {
-            if (names[i].toLowerCase().equals(original.toLowerCase())) {
+            if (names[i].equalsIgnoreCase(original)) {
                 names[i] = updatedName;
+                System.out.println(original + " : has been updated to: " + updatedName);
                 return true;
             }
         }
+        System.out.println("The name \'" + original + "\' was not found in array.");
+        return false;
     }
 }

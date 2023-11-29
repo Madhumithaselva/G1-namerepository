@@ -1,21 +1,15 @@
 
 X
-java:S49731"<Strings and Boxed types should be compared using "equals()".(“Í‹8£öÚÙÁ1
+java:S49732"<Strings and Boxed types should be compared using "equals()".(“Í‹8†Ç¦ÚÁ1
 \
-java:S1854"?Remove this useless assignment to local variable "updateCheck".(Èë‹à8÷ÚÙÁ1
-g
-java:S1854"ERemove this useless assignment to local variable "findLastNameArray".(ØÏÿæúÿÿÿÿ8÷ÚÙÁ1
-X
-java:S1481"6Remove this unused "findLastNameArray" local variable.(ØÏÿæúÿÿÿÿ8‚÷ÚÙÁ1
+java:S1854"?Remove this useless assignment to local variable "updateCheck".(á˜¥Ï8»Ç¦ÚÁ1
 M
-java:S1481"0Remove this unused "updateCheck" local variable.(Èë‹à8ƒ÷ÚÙÁ1
+java:S1481"0Remove this unused "updateCheck" local variable.(á˜¥Ï8¼Ç¦ÚÁ1
 {
-java:S3012"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ˆ¢¬Íıÿÿÿÿ8„÷ÚÙÁ1
+java:S3012"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ˆ¢¬Íıÿÿÿÿ8½Ç¦ÚÁ1
 C
-java:S1168["&Return an empty array instead of null.(¥¹ï8Š÷ÚÙÁ1
+java:S1168\"&Return an empty array instead of null.(¥¹ï8ÃÇ¦ÚÁ1
 C
-java:S1168y"&Return an empty array instead of null.(¥¹ï8÷ÚÙÁ1
-…
-java:S1157~"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(™“•‡úÿÿÿÿ8÷ÚÙÁ1
+java:S1168z"&Return an empty array instead of null.(¥¹ï8ÆÇ¦ÚÁ1
 H
-java:S1128"+Remove this unused import 'java.sql.Array'.(Õø‹ù8÷ÚÙÁ1
+java:S1128"+Remove this unused import 'java.sql.Array'.(Õø‹ù8ÇÇ¦ÚÁ1
