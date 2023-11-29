@@ -1,5 +1,15 @@
 
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•÷¡ñ8ôüîÒÁ1
-K
-java:S1068")Remove this unused "names" private field.(’÷Ê€ıÿÿÿÿ8¯ÔîÒÁ1
+‚
+java:S1488""`Immediately return this expression instead of assigning it to the temporary variable "newArray".(¡Š²Ïıÿÿÿÿ8ÒŞêÕÁ1
+X
+java:S49730"<Strings and Boxed types should be compared using "equals()".(“Í‹8ÓŞêÕÁ1
+{
+java:S3012"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ˆ¢¬Íıÿÿÿÿ8éŞêÕÁ1
+T
+java:S1854E"7Remove this useless assignment to local variable "tmp".(Âƒ³8îŞêÕÁ1
+T
+java:S1481@"2Remove this unused "newNamesArray" local variable.(ÃŒ®œøÿÿÿÿ8ñŞêÕÁ1
+R
+java:S1481A"0Remove this unused "arrayLength" local variable.(¥êÁ‚üÿÿÿÿ8ñŞêÕÁ1
+J
+java:S1481B"(Remove this unused "tmp" local variable.(Ñ ’‘øÿÿÿÿ8ñŞêÕÁ1

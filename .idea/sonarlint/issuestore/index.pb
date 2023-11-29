@@ -7,3 +7,5 @@
 Q.idea/sonarlint/securityhotspotstore/7/3/7382b2a51c5b64a234a22b225d821f6d5957cf02,c\6\c64ec493ece22486446dce88ef34b50dd7e7eb54
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+T
+$src/main/java/se/lexicon/Person.java,7\2\723011526dd074f8ed4a0e9a3bb8b57411ffb808
