@@ -14,7 +14,7 @@ public class NameRepository {
 
 //        String[] findLastNameArray = findByLastName("Panna");
 
-        boolean updateCheck = update("Anna Pana", "Gerd Abc" );
+        boolean updateCheck = update("Anna Panna", "Anna Panna" );
         System.out.println(Arrays.toString(names));
     }
 
@@ -126,11 +126,22 @@ public class NameRepository {
         for (int i = 0; i < names.length; i++) {
             if (names[i].equalsIgnoreCase(original)) {
                 names[i] = updatedName;
+
+                if (names[i].equalsIgnoreCase(updatedName)) {
+                    System.out.println("The name \'" + original + "\' already exists in the array and have not been updated.");
+                    return false;
+                }
+
                 System.out.println(original + " : has been updated to: " + updatedName);
                 return true;
             }
         }
         System.out.println("The name \'" + original + "\' was not found in array.");
         return false;
+    }
+
+    public static boolean remove(final String fullName) {
+
+        return true;
     }
 }
