@@ -1,21 +1,14 @@
 package se.lexicon;
 
-import java.sql.Array;
 import java.util.Arrays;
 
 public class NameRepository {
     private static String[] names;
 
     public static void main(String[] args) {
-        String[] nameArray = {"Anna Hjdfj", "Kalle Apefdn"};
+        String[] nameArray = {"Anna Hjdfj", "Kalle Apefdn", "Anna Panna"};
         setNames(nameArray);
 
-        add("Anna Panna");
-
-//        String[] findLastNameArray = findByLastName("Panna");
-
-        boolean updateCheck = update("Anna Panna", "Anna Panna" );
-        System.out.println(Arrays.toString(names));
     }
 
     public static int getSize(String[] names) {
@@ -24,9 +17,9 @@ public class NameRepository {
 
     public static void setNames(String[] strArray) {
         names = new String[getSize(strArray)];
-        for (int i = 0; i < strArray.length; i++) {
-            names[i] = strArray[i];
-        }
+        System.arraycopy(strArray, 0, names, 0, strArray.length);
+        System.out.println("Created array containing names:");
+        System.out.println(Arrays.toString(names));
     }
 
     public static void clear() {
@@ -35,7 +28,6 @@ public class NameRepository {
 
     public static String[] findAll(String[] strArray) {
         return Arrays.copyOf(strArray,strArray.length);
-
     }
     public static String find(final String fullName) {
         for (String name : names) {
@@ -43,11 +35,12 @@ public class NameRepository {
                 return name;
             }
         }
+        System.out.println("No name found");
         return null;
     }
     public static boolean add(final String fullName){
         for(String name:names){
-            if(name==fullName){
+            if(name.equals(fullName)){
                 System.out.println("Name already exists!!!");
                 return false;
             }
@@ -56,7 +49,7 @@ public class NameRepository {
         newArray[newArray.length-1]=fullName;
         clear();
         names=Arrays.copyOf(newArray,newArray.length);
-        System.out.println("A new name added ");
+        System.out.println("A new name added: " + fullName);
         System.out.println("Array after added a name:");
         System.out.println(Arrays.toString(names));
         return true;
@@ -89,7 +82,7 @@ public class NameRepository {
         }
         System.out.println("No name found matching: " + firstName);
 
-        return null;
+        return new String[0];
     }
 
     public static String[] findByLastName(final String lastName) {
@@ -97,8 +90,8 @@ public class NameRepository {
         int arrayLength = 0;
         String tmp;
 
-        for (int i = 0; i < names.length; i++) {
-            tmp = names[i].substring(names[i].indexOf(" ") + 1).trim();
+        for (String s : names) {
+            tmp = s.substring(s.indexOf(" ") + 1).trim();
             if (lastName.equals(tmp)) {
                 arrayLength++;
             }
@@ -119,7 +112,7 @@ public class NameRepository {
         }
         System.out.println("No name found matching: " + lastName);
 
-        return null;
+        return new String[0];
     }
 
     public static boolean update(final String original, final String updatedName) {
@@ -128,15 +121,15 @@ public class NameRepository {
                 names[i] = updatedName;
 
                 if (names[i].equalsIgnoreCase(updatedName)) {
-                    System.out.println("The name \'" + original + "\' already exists in the array and have not been updated.");
+                    System.out.println("The name '" + original + "' already exists in the array and have not been updated.");
                     return false;
                 }
 
-                System.out.println(original + " : has been updated to: " + updatedName);
+                System.out.println(original + " : has been updated to: " + "'" + updatedName + "'");
                 return true;
             }
         }
-        System.out.println("The name \'" + original + "\' was not found in array.");
+        System.out.println("The name '" + original + "' was not found in array.");
         return false;
     }
 
