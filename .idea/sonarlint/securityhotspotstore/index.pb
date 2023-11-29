@@ -9,3 +9,5 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 T
 $src/main/java/se/lexicon/Person.java,7\2\723011526dd074f8ed4a0e9a3bb8b57411ffb808
+O
+src/main/java/chrisse/Main.java,4\1\4155378c3e70fdd64806e2afefa8231b91dde7e7
