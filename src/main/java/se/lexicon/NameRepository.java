@@ -14,12 +14,12 @@ public class NameRepository {
 
     }
 
-    public static int getSize(String[] names) {
+    public static int getSize() {
         return names.length;
     }
 
     public static void setNames(String[] strArray) {
-        names = new String[getSize(strArray)];
+        names = new String[getSize()];
         System.arraycopy(strArray, 0, names, 0, strArray.length);
         System.out.println("Created array containing names:");
         System.out.println(Arrays.toString(names));
@@ -29,8 +29,8 @@ public class NameRepository {
         names=new String[]{};
     }
 
-    public static String[] findAll(String[] strArray) {
-        return Arrays.copyOf(strArray,strArray.length);
+    public static String[] findAll() {
+        return Arrays.copyOf(names, names.length);
     }
     public static String find(final String fullName) {
         for (String name : names) {
