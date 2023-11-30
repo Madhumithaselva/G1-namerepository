@@ -6,8 +6,11 @@ public class NameRepository {
     private static String[] names;
 
     public static void main(String[] args) {
-        String[] nameArray = {"Anna Hjdfj", "Kalle Apefdn", "Anna Panna"};
+        String[] nameArray = {"Anna Hjdfj", "Kalle Apefdn", "Anna Panna", "Mjau Apefdn"};
         setNames(nameArray);
+
+        findByFirstName("Ana");
+        findByLastName("Apefn");
 
     }
 
@@ -56,43 +59,23 @@ public class NameRepository {
     }
 
     public static String[] findByFirstName(final String firstName) {
-        String[] newNamesArray;
-        int arrayLength = 0;
-        String tmp;
-
-        for (int i = 0; i < names.length; i++) {
-            tmp = names[i].replaceAll("\\s.*", "");
-            if (firstName.equals(tmp)) {
-                arrayLength++;
-            }
-        }
-        if (arrayLength > 0) {
-            newNamesArray = new String[arrayLength];
-            int index = 0;
-
-            for (String name : names) {
-                if (name.toLowerCase().contains(firstName.toLowerCase())) {
-                    newNamesArray[index] = name;
-                    index++;
-                }
-            }
-            System.out.println("Returning new array of: ");
-            System.out.println(Arrays.toString(newNamesArray));
-            return newNamesArray;
-        }
-        System.out.println("No name found matching: " + firstName);
-
-        return new String[0];
+        return findFirstNameOrLastName(firstName, true);
     }
 
     public static String[] findByLastName(final String lastName) {
+        return findFirstNameOrLastName(lastName, false);
+    }
+
+    private static String[] findFirstNameOrLastName(String searchString, boolean method) {
         String[] newNamesArray;
         int arrayLength = 0;
         String tmp;
 
         for (String s : names) {
-            tmp = s.substring(s.indexOf(" ") + 1).trim();
-            if (lastName.equals(tmp)) {
+            tmp = method ?
+                    s.replaceAll("\\s.*", "") :
+                    s.substring(s.indexOf(" ") + 1).trim();
+            if (searchString.equals(tmp)) {
                 arrayLength++;
             }
         }
@@ -101,7 +84,7 @@ public class NameRepository {
             int index = 0;
 
             for (String name : names) {
-                if (name.toLowerCase().contains(lastName.toLowerCase())) {
+                if (name.toLowerCase().contains(searchString.toLowerCase())) {
                     newNamesArray[index] = name;
                     index++;
                 }
@@ -110,7 +93,7 @@ public class NameRepository {
             System.out.println(Arrays.toString(newNamesArray));
             return newNamesArray;
         }
-        System.out.println("No name found matching: " + lastName);
+        System.out.println("No name found matching: " + searchString);
 
         return new String[0];
     }

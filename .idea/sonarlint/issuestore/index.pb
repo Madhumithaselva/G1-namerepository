@@ -11,3 +11,7 @@ T
 $src/main/java/se/lexicon/Person.java,7\2\723011526dd074f8ed4a0e9a3bb8b57411ffb808
 O
 src/main/java/chrisse/Main.java,4\1\4155378c3e70fdd64806e2afefa8231b91dde7e7
+Y
+)src/main/java/se/lexicon/FindMethods.java,f\1\f12fe77db60ee0810a3bab0bb24a20aeabb8f8fe
+Å
+Q.idea/sonarlint/securityhotspotstore/f/1/f12fe77db60ee0810a3bab0bb24a20aeabb8f8fe,2\6\26fde83d407a53fcbcefabe3a53a5c14d3990370
