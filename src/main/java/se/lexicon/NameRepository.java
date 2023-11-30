@@ -1,6 +1,7 @@
 package se.lexicon;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class NameRepository {
     private static String[] names;
@@ -9,8 +10,8 @@ public class NameRepository {
         String[] nameArray = {"Anna Hjdfj", "Kalle Apefdn", "Anna Panna", "Mjau Apefdn"};
         setNames(nameArray);
 
-        findByFirstName("Ana");
-        findByLastName("Apefn");
+        System.out.println(remove("Kalle Apefdn"));
+        System.out.println(remove("Kalle Apefdn"));
 
     }
 
@@ -19,8 +20,8 @@ public class NameRepository {
     }
 
     public static void setNames(String[] strArray) {
-        names = new String[getSize()];
-        System.arraycopy(strArray, 0, names, 0, strArray.length);
+        clear();
+        names = Arrays.copyOf(strArray, strArray.length);
         System.out.println("Created array containing names:");
         System.out.println(Arrays.toString(names));
     }
@@ -117,7 +118,21 @@ public class NameRepository {
     }
 
     public static boolean remove(final String fullName) {
+        for (int i = 0; i < names.length; i++) {
+            if (Objects.equals(names[i], fullName)) {
+                names[i] = "";
+                Arrays.sort(names);
+                names = Arrays.copyOfRange(names, 1, names.length);
+                System.out.println("'" + fullName + "' - removed from name array." );
+                System.out.println("Names after removal:");
+                System.out.println(Arrays.toString(names));
 
-        return true;
+                return true;
+            }
+        }
+        System.out.println("'" + fullName + "' - not found in name array");
+        System.out.println("No name removed");
+
+        return false;
     }
 }
